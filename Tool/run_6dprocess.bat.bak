@@ -1,0 +1,1 @@
+python 6D_process.py --dataPath ./6d_imu/Minyen/minyen_move1-2_1_6D.csv

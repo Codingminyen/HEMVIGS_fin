@@ -1,0 +1,1 @@
+python elan_6D.py --dataPath ./move1_minyen_norm_6D.csv
