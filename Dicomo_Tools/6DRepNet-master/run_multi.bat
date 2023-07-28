@@ -1,0 +1,11 @@
+FOR %%f IN (C:\Users\lumin\python_CODE\Dicomo_tools\6DRepNet-master\video\*.avi) DO (
+start  /wait/b python demo.py --snapshot 6DRepNet_300W_LP_AFLW2000.pth --cam %%f 
+
+)
+
+
+FOR %%f IN (C:\Users\lumin\python_CODE\Dicomo_tools\6DRepNet-master\video\*.mp4) DO (
+start  /wait/b python demo.py --snapshot 6DRepNet_300W_LP_AFLW2000.pth --cam %%f 
+
+)
+

@@ -31,11 +31,13 @@ if __name__=='__main__':
     of_final= pd.DataFrame()
     of_keys =['x','y','z']    
     
-    # due to the position of the sensor, correct the data to right direction    
 
+    
+    
+    # perform standardization
     for k in ['x','y','z']:
         tmp_arr=of_norm[k].to_numpy().flatten()
-        of_diff[k]=np.diff(tmp_arr)    
+        of_diff[k]=np.diff(tmp_arr) # perform subtraction to get angular velocity.   
         m,s= of_diff[k].mean(),of_diff[k].std()
         if s ==0:
             of_diff[k]=of_diff[k]-m
@@ -62,7 +64,7 @@ if __name__=='__main__':
     of_filter[of_keys[2]] = signal.filtfilt(b, a, of_filter[of_keys[2]])
 
 
-
+    # due to the position of the sensor, correct the data to right direction    
     of_final[of_keys[0]]=-of_filter[of_keys[2]]
     of_final[of_keys[1]]=of_filter[of_keys[0]]
     of_final[of_keys[2]]=of_filter[of_keys[1]]     
