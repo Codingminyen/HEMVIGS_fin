@@ -72,7 +72,7 @@ Folders in google drive
 
 - `6d_imu`: generated euler data
 
-- `6d_processed`:
+- `6d_processed`: generated gyroscope data
 
 - `*_elan`: data for elan software
 
