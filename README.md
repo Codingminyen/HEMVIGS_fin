@@ -42,42 +42,44 @@ These tools are for head pose estimators.
 		Process every videos in `video` folder, and generate Euler angle data of the subject's facing angle.
 
 # Tools\Generate gyroscope data
-- clipping.py: 
+- `clipping.py`: 
 	This code is applied to clip the video file.
-- df_loc.py:
+- `df_loc.py`:
 	This is used for remove the unwanted raw, mainly for the synchronization of video and real sensor data.
 
-- run_6dprocess_multi.exe: # Generate gyro data from euler data
-	Driver for "6D_process.py". This exe file transforms the Euler angle data from 6DRepNet to Gyroscope data.
+- `run_6dprocess_multi.exe`: Generate gyro data from euler data
+	Driver for `6D_process.py`. This exe file transforms the Euler angle data from 6DRepNet to Gyroscope data.
 	Standardization(line 37), axis swapping to meet the real sensor data(line 67), and low pass filter (2.5Hz)(line 47) are included.
 	The exe is written in batch file.  
-	--datapath is the path of the folder directory of input files.  
-	--outputpath is the place to store output result.  
+	`--datapath` is the path of the folder directory of input files.  
+	`--outputpath` is the place to store output result.  
 	Please modify it as you wish. 
 
-If you want to visualize the data in Elan, please use the following code.
-- elan_multi.exe:
-	Driver for "elan.py". This exe file can process multiple files of "real sensor data" at once to generate the file that suitable for elan software.
+You might need to visualize the data in Elan to find how the axis of generated data should be changed to meet your sensor, 
+please use the following code to make the data fit elan software's requirement.
+https://archive.mpi.nl/tla/elan
+- `elan_multi.exe`:
+	Driver for `elan.py`. This exe file can process multiple files of "real sensor data" at once to generate the file that suitable for elan software.
 	Standardization included.
 
 
 
-- run_elan_6D_multi.exe:   # Process gyro data to fit Software Elan requirement.
+- `run_elan_6D_multi.exe`:   # Process gyro data to fit Software Elan requirement.
 	Driver for "elan_6D.py". This exe file can process multiple files of generated sensor data at once to generate the file that suitable for elan software.
 	Standardization included.
 
 Folders in google drive
 
-- 6d_imu: generated euler data
+- `6d_imu`: generated euler data
 
-- 6d_processed:
+- `6d_processed`:
 
-- *_elan: data for elan software
+- `*_elan`: data for elan software
 
-- *_label: data with label
+- `*_label`: data with label
 
 
-- raw_imu: raw imu data without going through any process.
+- `raw_imu`: raw imu data without going through any process.
 
 
 
