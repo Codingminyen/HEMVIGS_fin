@@ -80,8 +80,51 @@ Folders in google drive
 
 
 - `raw_imu`: raw imu data without going through any process.
+# Requirments
+I believe it should work only with the environment that meets `requirements_6Drepnet.txt `.   
+The code was built originally in Windows.  
+However, the `.exe` files are simple batch code for automation and should be easy to be modified.  
+I apologize for the inconvenience for users who try to apply it on other systems.  
+
+Face_track- requirements_face_track.txt   
+This directly applied the pytorch model published in github by joonson.  
+https://github.com/joonson/syncnet_python  
+```
+torch>=1.4.0
+torchvision>=0.5.0
+numpy>=1.18.1
+scipy>=1.2.1
+scenedetect==0.5.1
+opencv-contrib-python
+python_speech_features
+```
+
+6DRepNet- requirements_6Drepnet.txt  
+This directly applied the pytorch model published in github by Thorsten Hempel.  
+https://github.com/thohemp/6DRepNet  
+```
+matplotlib >= 3.3.4
+numpy >= 1.19.5
+opencv-python >= 4.5.5
+pandas >= 1.1.5
+Pillow >= 8.4.0
+scipy >= 1.5.4
+torch >= 1.10.1
+torchvision >= 0.11.2
+```
 
 
+# Publication
+```
+@article{minyen2022study,
+  title={A study on estimating the accurate head IMU motion from Video},
+  author={MinYen, Lu and ChenHao, Chen and others},
+  journal={マルチメディア, 分散, 協調とモバイルシンポジウム 2022 論文集},
+  volume={2022},
+  pages={918--923},
+  year={2022}
+}
+```
 
 
 
